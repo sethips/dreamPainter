@@ -1,0 +1,132 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  background-color: #F5F5F5;
+  color: #1D1D1D;
+}
+
+.painterWrapper {
+  display: flex;
+}
+
+.canvasWrapper {
+  background-color: #FFF;
+  cursor: crosshair;
+}
+
+.canvasWrapper__canvas {
+  mix-blend-mode: multiply;
+}
+
+.toolsWrapper {
+  padding: 1em;
+  user-select: none;
+}
+
+.inputWrapper__radio {
+display: none;
+}
+
+.inputWrapper__label {
+  padding: .75em;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 100%;
+  color: #FEFEFE;
+  background-color: #FF383F;
+  margin: .2em;
+  font-size: 1.25em;
+  vertical-align: middle;
+  user-select: none;
+}
+
+
+.inputWrapper__radio:checked + .inputWrapper__label {
+  background-color: rgb(155, 13, 17);
+}
+
+.inputWrapper__colorPicker {
+  display: none;
+}
+
+.colorPicker_label {
+  padding: 1.25em;
+  background-color: #000;
+  border-radius: 100%;
+  display: inline-block;
+  font-size: 1.25em;
+  vertical-align: middle;
+  margin: .2em;
+}
+
+.inputWrapper__button {
+  padding: 0;
+  border-width: 0;
+  outline: 0;
+}
+
+.inputWrapper__link {
+  text-decoration: none;
+}
+
+.inputWrapper__link:visited {
+  color: #1D1D1D;
+}
+
+.inputWrapper__control {
+  background-color: #CAEBF2;
+  color: #1D1D1D;
+  padding: .75em;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 100%;
+  margin: .25em;
+  font-size: 1.25em;
+}
+
+.brushWidth__wrapper {
+  height: 110px;
+  padding: 10px;
+  border: 1px solid #000;
+  position: relative;
+  margin-bottom: 1em;
+}
+
+.brushWidth__preview {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0 auto;
+  background-color: #000;
+  transition: all .2s ease;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  display: inline-block;
+}
+
+.inputWrapper__controlWidthWrapper {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  opacity: 1;
+}
+
+.inputWrapper__controlWidthWrapper.disabled {
+  opacity: .5;
+  pointer-events: none;
+}
+
+.painterWrapper__textLabel{
+  display: block;
+  padding-bottom: .5em;
+  font-weight: 800;
+}

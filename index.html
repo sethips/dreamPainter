@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset=UTF-8>
+    <title>DreamPainter</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body class="painter">
+    <main class="painterWrapper">
+        <section class="painterWrapper__column toolsWrapper">
+            <div class="painterWrapper_inputWrapper">
+                <label class="painterWrapper__textLabel">Brush Preview:</label>
+                <div class="brushWidth__wrapper">
+                    <div class="brushWidth__preview" id="brushWidthPreview"></div>
+                </div>
+                <div>
+                        <label class="painterWrapper__textLabel" for="toolWidthRange">Brush Width:</label>
+                    <input class="inputWrapper__brushWidth" type="range" value="50" id="toolWidthRange" min="1" max="100" />
+                </div>
+                <div>
+                        <label class="painterWrapper__textLabel">Tools:</label>
+                    <input class="inputWrapper__colorPicker" type="color" id="toolColorPicker">
+                    </input>
+                    <label id="colorPickerLabel" class="colorPicker_label" for="toolColorPicker"></label>
+                    <input name="toolMode" class="inputWrapper__radio inputWrapper__radio--brush" id="toolModePaint" type="radio" checked>
+                    </input>
+                    <label class="inputWrapper__label" for="toolModePaint">
+                        <i class="fas fa-paint-brush"></i>
+                    </label>
+                    <input name="toolMode" class="inputWrapper__radio inputWrapper__radio--erase" id="toolModeEraser" type="radio">
+                    </input>
+                    <label class="inputWrapper__label" for="toolModeEraser">
+                        <i class="fas fa-eraser"></i>
+                    </label>
+
+                    <input name="toolMode" class="inputWrapper__radio inputWrapper__radio--funky" id="globalModeFunky" type="radio">
+                    </input>
+                    <label class="inputWrapper__label" for="globalModeFunky">
+                        <i class="fab fa-quinscape"></i>
+                    </label>
+                </div>
+                <div class="inputWrapper__controlWidthWrapper disabled" id="controlWidthWrapper">
+                    <input class="inputWtrapper__checkbox inputWrapper__checkbox--controlWidth" id="controlWidth" type="checkbox">
+                    <label for="controlWidth">Control Width</label>
+                </input>
+                </div>
+
+                <label class="painterWrapper__textLabel">File Options:</label>
+                <button id="globalModeReset" class="inputWrapper__control inputWrapper__button inputWrapper__button--clear">
+                    <i class="fas fa-file"></i>
+                </button>
+
+                <a href="#" download="myImage.png" id="globalModeSave" class="inputWrapper__control inputWrapper__link inputWrapper__link--save">
+                    <i class="fas fa-download"></i>
+                </a>
+            </div>
+        </section>
+        <section class="painterWrapper__column canvasWrapper">
+            <canvas class="canvasWrapper__canvas" id="paintCanvas"></canvas>
+        </section>
+    </main>
+    <script src=js/main.js></script>
+</body>
+
+</html>
