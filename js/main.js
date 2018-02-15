@@ -138,7 +138,6 @@ var CanvasPainter = (function() {
   }
 
   function handleMouseDown(e) {
-    console.log(e);
     isDrawing = true;
     [lastX, lastY] = [e.offsetX, e.offsetY];
   }
